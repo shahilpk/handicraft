@@ -1,0 +1,32 @@
+<div class="bod">
+    <div class="-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h3>Sign Up</h3>
+            <p>Please enter your credentials to login.</p>
+          </div>
+        </div>
+        <form (ngSubmit)="register()" [formGroup]="registerForm" class="login-form" >
+          <input type="text" name="name" formControlName="name" placeholder="name"/>
+          <div *ngIf="this.registerForm.get('name')?.touched&&this.registerForm.get('name')?.errors" style="color: red;">
+            Invalid name
+        </div>
+          <input type="text" name="username" formControlName="username" placeholder="username"/>
+          <div *ngIf="this.registerForm.get('username')?.touched&&this.registerForm.get('username')?.errors" style="color: red;">
+            Invalid username
+        </div>
+          <input type="text" name="emial" formControlName="email" placeholder="Email"/>
+          <div *ngIf="this.registerForm.get('emial')?.touched&&this.registerForm.get('emial')?.errors" style="color: red;">
+            Invalid Email
+        </div>
+          <input type="password" name="password" formControlName="password" placeholder="password"/>
+          <div *ngIf="this.registerForm.get('password')?.touched&&this.registerForm.get('password')?.errors" style="color: red;">
+            Invalid password
+        </div>
+          <button>SingUp</button>
+          <p class="message">already have an account? <a routerLink="/">Please login</a></p>
+        </form>
+      </div>
+    </div>
+</div>

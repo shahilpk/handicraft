@@ -1,0 +1,134 @@
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" style="color: rgb(23, 9, 9);">HandiCrafts</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   
+    <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+      
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+        <li class="nav-item" >
+          <a class="nav-link " routerLink="/home" aria-current="page" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products"  >Products</a>
+        </li>
+       
+        <!-- <li class="nav-item d-flex">
+          <a class="nav-link " style="padding-right: 0px;" routerLink="/cart" tabindex="-1" aria-disabled="true" ><i class="fa-solid fa-cart-shopping"></i></a>
+          <span style="padding-left: 0px;" class="badge text-white ms-1 rounded-pill">{{totalItem}}</span>
+
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link"  (click)="logout()"  >Logout</a>
+        </li>
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+
+
+<section class="section">
+<h2 class="tag" routerLink="/products">Shope More,<br>
+  <span style="color: red; font-weight: 600; font-size: 35px; font-family: cursive;">Save</span> More
+
+</h2>
+
+<button class="btn btn-success" style="margin-left: 50px; margin-top: 30px;" routerLink="/products">shop more</button>
+</section>
+
+
+
+
+
+<ng-container *ngIf="product.length==0">
+    <div class="container text-center border">
+      <div class="">
+        <h3>My Cart</h3>
+      </div><hr>
+      <div class="center mt-5 mb-5">
+        <img src="https://i1.wp.com/www.huratips.com/wp-content/uploads/2019/04/empty-cart.png?fit=603%2C288&ssl=1" alt="">
+        <h4>Your cart is empty!</h4>
+        <h6>Add item to your cart</h6>
+        <button routerLink="/products" class="btn btn-primary">Shope Now</button>
+      </div>
+    </div>
+    
+  </ng-container>
+  
+
+  
+  
+  
+  <ng-container *ngIf="product.length!=0">
+  
+  <div class="container-fluid mt-5"> 
+    <div class="row">
+      <div class="col-8">
+    <div class="card-table border">
+      <div class="cart-product">
+      <table class="table table-responsive border">
+          <thead>
+            <tr >
+             
+              <th scope="col">Product</th>
+              <th scope="col">Image</th>
+              <!-- <th scope="col">Description</th> -->
+              <th scope="col">Price</th>
+              <th scope="col">Total</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of product">
+              
+              <td style="width: 200px;">{{item.name}}</td>
+              <td><img style="width: 90px;" [src]="item.imgUrl" alt=""></td>
+              <!-- <td>{{item.description}}</td> -->
+              <th>${{item.price}}</th>
+              <td>${{item.total}}</td>
+              <td><button (click)="removeItemCart(item)" style="width: 60px;" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button></td>
+            </tr>
+           
+           
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </div>
+    <div class="col-4" >
+      <div class="card bg-light mb-3" >
+        <div class="card-header">PRICE DETAILS</div>
+        <div class="card-body">
+          <div class="price d-flex " style="margin-bottom: 15px;">
+            <h5 class="card-title">Price({{totalItem}} items)</h5>
+            <h5 style="justify-content: flex-end;display: flex;flex: 1;"> ${{totalPrice}}</h5>
+          </div>
+          <div class="price d-flex"style="margin-bottom: 15px;">
+            <h5 class="card-title">Discount</h5>
+            <h5 style="justify-content: flex-end;display: flex;flex: 1; " class="text-success"> ${{totalPrice}}</h5>
+          </div>
+
+          <div class="price d-flex"style="margin-bottom: 15px;">
+            <h5 class="card-title">Delivery Charges</h5>
+            <h5 style="justify-content: flex-end;display: flex;flex: 1; " class="text-success"> Free</h5>
+          </div><hr>
+          <div class="total d-flex"style="margin-bottom: 15px;">
+            <h5 class="card-title" style="font-size: 20px;font-weight: 600;" >Total Amount</h5>
+            <h5 style="justify-content: flex-end;display: flex;flex: 1; font-size: 20px;font-weight: 600;  "> ${{totalPrice}}</h5>
+          </div><hr>
+          <div class="order" style="justify-content: flex-end;display: flex;flex: 1; " >
+            <button class="btn btn-warning" type="submit" (click)="clicked()">Place Order</button>
+
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  </ng-container>
+

@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+<div class="collection">
+  <div class="row gx-4 gx-lg-5  row-cols-md-3 row-cols-xl-4  justify-content-center p-5">
+    <div *ngFor="let product of productList | filter:search: 'name' ">
+      <div class="card" style="width: 300px; height: 400px; margin-bottom: 20px;">
+        <img src="{{product.imgUrl}}" style="height:250px;" class="card-img-top" alt="...">
+        <div>
+          <h5 class="card-title">{{product.name}}</h5>
+          <p style="color: red;">${{product.price}}</p>
+
+
+          <button type="button" class="btn btn-danger ms-2 mb-2" (click)="addToCart(product)">Add to cart</button>
+
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,322 @@
+body {
+  font-family: "Century Gothic", "Lato", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.et-hero-tabs,
+.et-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  background: #eee;
+  text-align: center;
+  padding: 0 2em;
+}
+
+
+.et-hero-tabs h3,
+.et-slide h3 {
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  opacity: 0.6;
+}
+
+.et-hero-tabs-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  z-index: 10;
+}
+
+.et-hero-tabs-container--top {
+  position: fixed;
+  top: 0;
+}
+
+/* .et-hero-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: #000;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease;
+  font-size: 0.8rem;
+} */
+
+.et-hero-tab:hover {
+  color: white;
+  background: rgba(102, 177, 241, 0.8);
+  transition: all 0.5s ease;
+}
+
+/* .et-hero-tab-slider {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  background: #66B1F1;
+  transition: left 0.3s ease;
+} */
+
+#tab-es6 {
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://cdn.pixabay.com/photo/2017/06/17/10/55/hot-air-balloon-2411851_960_720.jpg);
+
+  background-position: center;
+  background-size: cover;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.content {
+  color: #fbfcfd;
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translate(-20%);
+  z-index: 2;
+}
+
+#hi {
+  font-size: 50px;
+  margin: 10px 0px 30px;
+  line-height: 80px;
+}
+.bubbles img{
+  width: 50px;
+animation:bubble 7s linear infinite;
+}
+.bubbles{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: -70px;
+
+}
+
+@keyframes bubble{
+  0%{
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50%{
+   
+    opacity: 1;
+  }
+  70%{
+    
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(-80vh);
+    opacity: 0;
+  }
+}
+.bubbles img:nth-child(1){
+  animation-delay: 2s;
+  width: 20px;
+  
+}
+.bubbles img:nth-child(2){
+  animation-delay: 1s;
+  width: 12px;
+
+}
+.bubbles img:nth-child(3){
+  animation-delay: 3s;
+  width: 20px;
+}
+.bubbles img:nth-child(4){
+  animation-delay: 4.5s;
+  width: 5px;
+}
+.bubbles img:nth-child(5){
+  animation-delay: 3s;
+  width: 10px;
+}
+.bubbles img:nth-child(6){
+  animation-delay: 6s;
+  width: 8px;
+}
+.bubbles img:nth-child(7){
+  animation-delay: 7s;
+  width: 5px;
+  
+}
+
+/* country */
+.col-lg-2{
+  border: 0px;
+  background: transparent;
+}
+.card{
+  background: transparent;
+  border: 0px;
+  
+}
+.ucard img{
+  border-radius: 60%;
+  width: 100%;
+  height: 200px;
+  -webkit-filter: sepia(100%);
+	filter: sepia(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+  
+}
+.ucard img:hover{
+
+  -webkit-filter: sepia(0);
+	filter: sepia(0);
+  
+}
+
+/* handi */
+#handi{
+  font-family: Oswald;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #43474c;
+  margin-bottom: 20px;
+}
+#para{
+  font-family: Roboto;
+    font-size: 14px;
+    line-height: 1.71;
+    text-align: justify;
+    color: #7c838c;
+    padding-top: 0;
+    margin-top: -10px;
+}
+.lcard{
+  background-color: #edf1f6;
+  height: 500px;
+  border: 1px solid;
+}
+.lcard h3{
+  
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    margin: 10px 0;
+}
+.lcard p{
+  font-family: Roboto;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 20px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+#about{
+  font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    margin: 10px 0;
+}
+/* @media (min-width: 800px) {
+
+  .et-hero-tabs h1,
+  .et-slide h1 {
+    font-size: 3rem;
+  }
+
+  .et-hero-tabs h3,
+  .et-slide h3 {
+    font-size: 1rem;
+  }
+
+  .et-hero-tab {
+    font-size: 1rem;
+  }
+  
+
+} */
+
+
+/* header */
+.navbar{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.navbar-nav{
+  
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+
+}
+ul li{
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.nav-link{
+  color: white;
+  transition: 0.5s;
+  
+}
+.nav-link:hover{
+  color: black;
+
+}
+  
+
+.form-control{
+  width: 350px;
+  border: none;
+  border-radius: 40px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.sbtn{
+  white-space: nowrap;
+  border-radius: 40px;
+border: 0px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: 0px;
+}
+.navbar{
+  background-color:red;
+ position: sticky;
+
+}
+
+@media screen and (max-width:400px){
+   section{
+    width:100%
+   }
+   .col-md-4{
+    width: 80%;
+    padding-left: 0px;
+    margin: -40px;
+   }
+  
+}

@@ -1,0 +1,25 @@
+
+<div class="bod">
+    <div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h3>LOGIN</h3>
+            <p>Please enter your credentials to login.</p>
+          </div>
+        </div>
+        <form (ngSubmit)="login()" [formGroup]="loginForm" class="login-form">
+          <input type="text"  name="username" formControlName="username"  placeholder="username"/>
+          <div *ngIf="this.loginForm.get('username')?.touched&&this.loginForm.get('username')?.errors" style="color: red;">
+            Invalid username
+        </div>
+          <input type="password" name="password" formControlName="password" placeholder="password"/>
+          <div *ngIf="this.loginForm.get('password')?.touched&&this.loginForm.get('password')?.errors" style="color: red;">
+            Invalid Password
+        </div>
+          <button type="submit">login</button>
+          <p class="message">Not registered? <a routerLink="register">Create an account</a></p>
+        </form>
+      </div>
+    </div>
+</div>

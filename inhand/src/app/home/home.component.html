@@ -1,0 +1,268 @@
+<nav class="navbar navbar-expand-lg fixed-top" style="height: 50px;">
+  <div class="container-fluid">
+    <a class="navbar-brand" style="color: rgb(16, 4, 4);">HandiCrafts</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   
+    <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+      
+      <ul class="navbar-nav" style="text-align: right;" >
+        <li class="nav-item" >
+          <a class="nav-link " routerLink="/home" aria-current="page" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products"  >Products</a>
+        </li>
+       
+        <li class="nav-item d-flex">
+          <a class="nav-link " style="padding-right: 0px;" routerLink="/cart" tabindex="-1" aria-disabled="true" ><i class="fa-solid fa-cart-shopping"></i></a>
+          <span style="padding-left: 0px;" class="badge text-white ms-1 rounded-pill">{{totalItem}}</span>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  (click)="logout()"  >Logout</a>
+        </li>
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+
+<main class="et-main">
+
+  <section class="et-slide" id="tab-es6">
+    <div class="content">
+      <small>Welcome to our </small>
+      <h1 id="hi">Creative Ideas</h1>
+    </div>
+    <div class="bubbles">
+      <img
+        src="https://th.bing.com/th/id/R.d1460d3e7dc0ccf7f1579b377ae7ba1a?rik=PH8%2bZOArHbB9sw&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2faTq%2fLeM%2faTqLeMdXc.png&ehk=TN3ZJm6bbathojgOAhhcYh1kEAJDWkGAsSPD9OmKMOw%3d&risl=&pid=ImgRaw&r=0"
+        alt="">
+      <img
+        src="https://th.bing.com/th/id/R.d1460d3e7dc0ccf7f1579b377ae7ba1a?rik=PH8%2bZOArHbB9sw&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2faTq%2fLeM%2faTqLeMdXc.png&ehk=TN3ZJm6bbathojgOAhhcYh1kEAJDWkGAsSPD9OmKMOw%3d&risl=&pid=ImgRaw&r=0"
+        alt="">
+      <img
+        src="https://th.bing.com/th/id/R.d1460d3e7dc0ccf7f1579b377ae7ba1a?rik=PH8%2bZOArHbB9sw&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2faTq%2fLeM%2faTqLeMdXc.png&ehk=TN3ZJm6bbathojgOAhhcYh1kEAJDWkGAsSPD9OmKMOw%3d&risl=&pid=ImgRaw&r=0"
+        alt="">
+      <img
+        src="https://th.bing.com/th/id/R.d1460d3e7dc0ccf7f1579b377ae7ba1a?rik=PH8%2bZOArHbB9sw&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2faTq%2fLeM%2faTqLeMdXc.png&ehk=TN3ZJm6bbathojgOAhhcYh1kEAJDWkGAsSPD9OmKMOw%3d&risl=&pid=ImgRaw&r=0"
+        alt="">
+      <img
+        src="https://th.bing.com/th/id/R.d1460d3e7dc0ccf7f1579b377ae7ba1a?rik=PH8%2bZOArHbB9sw&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2faTq%2fLeM%2faTqLeMdXc.png&ehk=TN3ZJm6bbathojgOAhhcYh1kEAJDWkGAsSPD9OmKMOw%3d&risl=&pid=ImgRaw&r=0"
+        alt="">
+      <img
+        src="https://th.bing.com/th/id/R.d1460d3e7dc0ccf7f1579b377ae7ba1a?rik=PH8%2bZOArHbB9sw&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2faTq%2fLeM%2faTqLeMdXc.png&ehk=TN3ZJm6bbathojgOAhhcYh1kEAJDWkGAsSPD9OmKMOw%3d&risl=&pid=ImgRaw&r=0"
+        alt="">
+
+      <img
+        src="https://th.bing.com/th/id/R.d1460d3e7dc0ccf7f1579b377ae7ba1a?rik=PH8%2bZOArHbB9sw&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2faTq%2fLeM%2faTqLeMdXc.png&ehk=TN3ZJm6bbathojgOAhhcYh1kEAJDWkGAsSPD9OmKMOw%3d&risl=&pid=ImgRaw&r=0"
+        alt="">
+    </div>
+
+
+  </section>
+  <section class="et-slide" id="tab-flexbox">
+    <div class=" mt-5">
+      <div class="row" style="justify-content: space-between;">
+        <div class="col-lg-2 ">
+          <div class="card ucard" style="width: 15rem;">
+            <img class="card-img-top"
+              src="https://www.caleidoscope.in/wp-content/uploads/2021/06/Aranmula-Kannadi-1024x682.jpg"
+              alt="Card image cap">
+            <p>Karnataka</p>
+            <div class="card-body">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="card ucard" style="width: 15rem;">
+            <img class="card-img-top"
+              src="https://www.caleidoscope.in/wp-content/uploads/2016/06/Keralas-Beautiful-Eco-friendly-Coconut-Shell-Handicrafts-1-1024x531.jpg"
+              alt="Card image cap">
+            <p>Kerala</p>
+            <div class="card-body">
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="card ucard" style="width: 15rem;">
+            <img class="card-img-top"
+              src="https://www.caleidoscope.in/wp-content/uploads/2020/09/Art-and-craft-of-Maharashtra-02.jpg"
+              alt="Card image cap">
+            <p>Maharashtra</p>
+            <div class="card-body">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="card ucard" style="width: 15rem;">
+            <img class="card-img-top"
+              src="https://www.caleidoscope.in/wp-content/uploads/2020/02/Metal-Crafts-of-India-Jaipur-Koftagiri-1024x630.jpg"
+              alt="Card image cap">
+            <p>Rajasthan</p>
+            <div class="card-body">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="card ucard" style="width: 15rem;">
+            <img class="card-img-top" src="https://cdn.cdnparenting.com/articles/2019/05/18105353/72701002-H.webp"
+              alt="Card image cap">
+            <p>Odisha</p>
+            <div class="card-body">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="card ucard" style="width: 15rem;">
+            <img class="card-img-top"
+              src="https://cdn.yehaindia.com/wp-content/uploads/2020/07/shell-hangings-561x841.jpg"
+              alt="Card image cap">
+            <p>Gulf of MUnnar</p>
+            <div class="card-body">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+
+      <div class="col-md-12 dest dest_pad-left_right">
+        <h3 id="handi">HANDICRFAT OF INDIA</h3>
+        <p id="para">India's rich cultural heritage and centuries of evolutionary tradition is manifested by the huge
+          variety of
+          handicrafts made all over the country. Handicrafts are a mirror of the cultural identity of the ethnic people
+          who make it. Through the ages, handicrafts made in India like the Kashmiri woollen carpets, Zari embroidered
+          fabrics, terracotta and ceramic products, silk fabrics etc. have maintained their exclusiveness. In the
+          ancient times, these handicrafts were exported to far off countries of Europe, Africa, West Asia and Far East
+          via the 'silk route'. The entire wealth of timeless Indian handicrafts has survived through the ages. These
+          crafts carry the magnetic appeal of the Indian culture that promises exclusivity, beauty, dignity and style.
+        </p>
+      </div>
+    </div>
+
+  </section>
+  <section class="et-slide" id="tab-react" style="margin-top: -250px;">
+    <div class="container">
+      <div class="row" style="padding-left: 10px;">
+        <div class="col-md-4">
+          <div class="card lcard" style="width: 25rem;">
+            <img class="card-img-top"
+              src="https://www.incredibleindia.org/content/dam/incredibleindia/images/places/lucknow/lucknow-crafts-30.jpg/_jcr_content/renditions/cq5dam.web.640.480.jpeg"
+              alt="Card image cap">
+            <div class="card-body">
+              <h3>Chikankari</h3>
+              <p class="card-text">One of the important crafts of Uttar Pradesh is Chikankari, which entails delicate
+                and traditional hand embroidery. This form of handicraft is mainly practiced in Lucknow. It is done on
+                fabrics like chiffon, muslin, organza, organdie and silk. Chikan saris and Kurtas which are the perfect
+                summer wear.
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card lcard" style="width: 25rem;">
+            <img class="card-img-top"
+              src="https://www.incredibleindia.org/content/dam/incredibleindia/images/places/agartala/agartala-cane-and-bamboo-handicrafts-150.jpg/_jcr_content/renditions/cq5dam.web.640.480.jpeg"
+              alt="Card image cap">
+            <div class="card-body">
+              <h3>Cane and Bamboo Handicrafts</h3>
+              <p class="card-text">Cane and Bamboo occupy a distinctive place in the life of Tripura. Wide variety of
+                wonderful objects are made out of Cane and Bamboo. A variety of items are produced, including furniture,
+                table mats and other mat products, lamp shades, etc.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card lcard" style="width: 25rem;">
+            <img class="card-img-top"
+              src="https://www.incredibleindia.org/content/dam/incredibleindia/images/places/hyderabad/hyderabad-bidriware-metal-handicraft-70.jpg/_jcr_content/renditions/cq5dam.web.640.480.jpeg"
+              alt="Card image cap">
+            <div class="card-body">
+              <h3>Bidriware Metal Handicraft</h3>
+              <p class="card-text">The Bidriware craft is indeed an exquisite craft. Bidri craftsmen need to possess not
+                just skill and patience but a lot of creativity as well so that they can bring into existence by
+                artistic means beautiful designs of shining silver on a dull black background. The Mughals are credited
+                with patronizing Bidriware in this country. Bidriware is divided into three different forms.</p>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+  </section>
+  <section class="et-slide" id="tab-angular">
+    <div class="container" style="margin-top: -200px;">
+      <div class="row" style="padding-left: 10px;">
+        <div class="col-md-4">
+          <div class="card lcard" style="width: 25rem;">
+            <img class="card-img-top"
+              src="https://www.incredibleindia.org/content/dam/incredibleindia/images/places/bikaner/bikaner-carpet-weaving-130.jpg/_jcr_content/renditions/cq5dam.web.640.480.jpeg"
+              alt="Card image cap">
+            <div class="card-body">
+              <h3>Carpet Weaving</h3>
+              <p class="card-text">It is one of the most renowned sectors of Rajasthan. Carpets of Bikaner are famous
+                for their high-quality, high-spirited colours and geometric motifs.
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card lcard" style="width: 25rem;">
+            <img class="card-img-top"
+              src="https://www.incredibleindia.org/content/dam/incredibleindia/images/places/agartala/agartala-cane-and-bamboo-handicrafts-150.jpg/_jcr_content/renditions/cq5dam.web.640.480.jpeg"
+              alt="Card image cap">
+            <div class="card-body">
+              <h3>Cane and Bamboo Handicrafts</h3>
+              <p class="card-text">Cane and Bamboo occupy a distinctive place in the life of Tripura. Wide variety of
+                wonderful objects are made out of Cane and Bamboo. A variety of items are produced, including furniture,
+                table mats and other mat products, lamp shades, etc.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card lcard" style="width: 25rem;">
+            <img class="card-img-top"
+              src="https://www.incredibleindia.org/content/dam/incredibleindia/images/places/hyderabad/hyderabad-bidriware-metal-handicraft-70.jpg/_jcr_content/renditions/cq5dam.web.640.480.jpeg"
+              alt="Card image cap">
+            <div class="card-body">
+              <h3>Bidriware Metal Handicraft</h3>
+              <p class="card-text">The Bidriware craft is indeed an exquisite craft. Bidri craftsmen need to possess not
+                just skill and patience but a lot of creativity as well so that they can bring into existence by
+                artistic means beautiful designs of shining silver on a dull black background. The Mughals are credited
+                with patronizing Bidriware in this country. Bidriware is divided into three different forms.</p>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+    <div class="container-fluid " style="margin-top: 100px;">
+      <h4 id="about">INDIAN HANDICRAFTS ITEMS ARE THE BEST FOUND AT ECRAFTINDIA FOR HOME DECORATION & GIFTING PURPOSES
+      </h4>
+      <p>There are plenty of things about India that we as Indians can be proud about – we are one of the most powerful
+        nations in the world, we have a landscape that varies every hundred kilometres, from beaches to mountains to
+        deserts, we have everything. And then there is a cultural variety and heritage of our country that each and
+        every one of us can take pride in – from the stunning temples to the forts that have stood the test of time,
+        there is so much to marvel at. It would be almost unfair if we do not talk about the talent of our artisans and
+        craftsmen – the extent of handicrafts that emerge from each part of our country is nothing short of astounding.
+        From weaving stories with thread on silk to sculpting intricate facial features into metal – there is little
+        that our artisans can’t do and while several such art forms are now dying a slow death, there are some who are
+        trying to keep the arts alive and eCraftIndia happens to be one of them!
+      </p>
+    </div>
+  </section>
+
+</main>
+<app-footer></app-footer>
